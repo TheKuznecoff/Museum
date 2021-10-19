@@ -1,0 +1,78 @@
+:root {
+   --bg-dark: #030303;
+   --dark-red: #710707;
+   --font-gold: #9d8665;
+   --dark-gold: #7e6c51;
+   --white: #ffffff;
+}
+.section-title {
+   font-family: Forum;
+   font-weight: 400;
+   font-size: 80px;
+   line-height: 90px;
+   letter-spacing: 5px;
+   text-transform: uppercase;
+   color: var(--white);
+}
+.section-text {
+   font-family: Roboto;
+   font-weight: 300;
+   font-size: 28px;
+   line-height: 33px;
+   letter-spacing: 2px;
+   color: var(--white);
+}
+.align-right {
+   text-align: right;
+}
+@media (max-width: 1024px) {
+   .section-title {
+      font-size: calc(28px + (80 - 28) * ((100vw - 420px) / (1920 - 420)));
+      line-height: 180%;
+      letter-spacing: 5.5px;
+   }
+   .section-text {
+      font-size: 24px;
+      line-height: 28px;
+   }
+   ._display {
+      display: none;
+   }
+   ._align {
+      text-align: left;
+   }
+}
+
+@media (max-width: 768px) {
+   .section-title {
+      line-height: 150%;
+      letter-spacing: 5px;
+   }
+   .section-text {
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 2px;
+   }
+}
+
+@media (max-width: 420px) {
+   .section-title {
+      font-size: 28px;
+      line-height: 143%;
+   }
+   .section-text {
+      font-size: 16px;
+      line-height: 19px;
+   }
+   ._align {
+      text-align: center;
+   }
+   ._display {
+      display: block;
+   }
+}
+@media (max-width: 320px) {
+   .section-title {
+      font-size: 26px;
+   }
+}

@@ -1,0 +1,112 @@
+.btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   &__red {
+      width: 360px;
+      height: 75px;
+      font-family: Roboto;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: 2px;
+      color: var(--white);
+      background: var(--dark-red);
+      border-radius: 10px;
+      padding: 0px 64px;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         background: var(--font-gold);
+      }
+      &:focus {
+         background: var(--dark-gold);
+      }
+   }
+}
+.btn__slider {
+   display: flex;
+   background: none;
+   margin-right: 20px;
+   &:hover {
+      filter: invert(50%) sepia(56%) saturate(230%) hue-rotate(356deg) brightness(97%) contrast(84%);
+   }
+}
+.btn__slider:last-child {
+   margin-right: 0px;
+}
+
+.buy-btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: Roboto;
+   font-weight: 300;
+   text-align: center;
+   width: 175px;
+   height: 50px;
+   font-size: 22px;
+   line-height: 26px;
+   letter-spacing: 2px;
+   background-color: #000000;
+   border: none;
+   border-radius: 2px;
+   transition: all 0.3s ease 0s;
+   color: var(--white);
+   float: right;
+   position: relative;
+   bottom: 155px;
+   &:hover {
+      background-color: var(--font-gold);
+   }
+   &:focus {
+      background-color: var(--dark-gold);
+   }
+}
+
+@media (max-width: 1024px) {
+   .btn {
+      &__red {
+         width: calc(300px + (360 - 300) * ((100vw - 1024px) / (1920 - 1024)));
+         height: calc(60px + (75 - 60) * ((100vw - 1024px) / (1920 - 1024)));
+         font-size: 20px;
+         line-height: 23px;
+         letter-spacing: 2px;
+         display: flex;
+         align-items: center;
+         text-align: center;
+         padding: 0px 40px;
+      }
+   }
+   .buy-btn {
+      bottom: 50px;
+      margin-right: 29px;
+   }
+}
+
+@media (max-width: 768px) {
+   .btn {
+      &__red {
+         display: none;
+      }
+   }
+   .buy-btn {
+      bottom: -15px;
+   }
+}
+
+
+@media (max-width: 420px) {
+   .btn__slider {
+      margin-right: 13px;
+   }
+   .buy-btn {
+      margin-right: 23%;
+   }
+}
+
+@media (max-width: 320px) {
+   .buy-btn {
+      margin-right: 5px;
+   }
+}
