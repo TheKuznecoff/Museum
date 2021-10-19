@@ -1,0 +1,45 @@
+.icon__menu {
+	display: none;
+	@media (max-width: 1024px) {
+		display: block;
+		position: absolute;
+		top: calc(0px + (5 - 0) * ((100vw - 420px) / (1440 - 420)));
+		right: 20px;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span {
+			transition: all 0.3s ease 0s;
+			top: calc(50% - 1px);
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			&:first-child {
+				top: 0px;
+			}
+			&:last-child {
+				top: auto;
+				bottom: 0px;
+			}
+		}
+		&._active {
+			span {
+				transform: scale(0);
+				&:first-child {
+					transform: rotate(-45deg);
+					top: calc(50% - 1px);
+				}
+				&:last-child {
+					transform: rotate(45deg);
+					bottom: calc(50% - 1px);
+				}
+			}
+		}
+	}
+   @media (max-width: 420px) {
+      right: 1px;
+   }
+}

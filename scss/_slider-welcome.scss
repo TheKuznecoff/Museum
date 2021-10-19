@@ -1,0 +1,196 @@
+.slider {
+   overflow: hidden;
+   position: absolute;
+   top: 0;
+   right: 0;
+   z-index: 1;
+   max-width: 1000px;
+   height: 810px;
+}
+.image-slider__slide {
+   &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%);
+   }
+}
+.image-slider__wrapper {
+   max-width: 1000px;
+   height: 750px;
+   position: relative;
+}
+
+.controls-slider {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0px 74px;
+   width: 601px;
+   height: 120px;
+   background-color: var(--bg-dark);
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   z-index: 2;
+   &__number {
+      font-family: Roboto;
+      font-weight: normal;
+      font-size: 22px;
+      width: 76px;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: uppercase;
+      color: var(--white);
+      p:not(:last-child) {
+         margin-right: 10px;
+      }
+   }
+   &__btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+   width: 180px;
+}
+.swiper-pagination {
+   position: static;
+   width: 180px;
+   height: 16px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.dot {
+   width: 16px;
+    height: 16px;
+    background-color: var(--white);
+    transition: all 0.2s ease-out;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.dot-active {
+   background-color: var(--dark-gold);
+}
+@media (max-width: 1024px) {
+   .section-welcome {
+      height: calc(350px + (525 - 285) * ((100vw - 420px) / (1024 - 420)));
+   }
+   .section-welcome__slider {
+      max-width: calc(380px + (700 - 380) * ((100vw - 420px) / (1024 - 420)));
+      height: calc(285px + (525 - 285) * ((100vw - 420px) / (1024 - 420)));
+   }
+   .image-slider__image {
+      img {
+         width: calc(380px + (700 - 380) * ((100vw - 420px) / (1024 - 420)));
+         height: calc(285px + (525 - 285) * ((100vw - 420px) / (1024 - 420)));
+      }
+   }
+
+   .controls-slider {
+      width: 100%;
+      justify-content: flex-end;
+      padding-right: 75px;
+      bottom: -52px;
+      &__number {
+         margin-right: 32px;
+         p {
+            font-size: 20px;
+            line-height: 40px;
+         }
+      }
+   }
+   .dot {
+      width: 12px;
+      height: 12px;
+   }
+   .dot:last-child {
+      margin-right: 44px;
+   }
+}
+
+@media (max-width: 768px) {
+   .section-welcome__slider {
+      max-width: 100%;
+   }
+   .slider {
+      align-items: center;
+      padding-bottom: 0px;
+      position: static;
+      width: 728px;
+   }
+   .controls-slider {
+      justify-content: center;
+      bottom: -120px;
+   }
+   .image-slider__image img {
+      width: 100%;
+      height: 100%;
+   }
+}
+
+@media (max-width: 500px) {
+   .controls-slider {
+      height: 60px;
+      bottom: calc(-50px + (-120 - 50) * ((100vw - 420px) / (1024 - 420)));
+      padding: 0px 0px 0px 0px;
+     // bottom: -70px;
+   }
+}
+
+@media (max-width: 420px) {
+   .slider-wrapper__slide {
+      img {
+         width: 380px;
+         height: 285px;
+      }
+   }
+   .swiper-pagination-bullets.swiper-pagination-horizontal {
+      display: none;
+   }
+   .controls-slider {
+      padding: 0px 10px;
+      justify-content: space-around;
+      &__number {
+         margin-right: 0px;
+         p {
+            font-size: 16px;
+         }
+      }
+      &__btn {
+         padding-right: 0px;
+      }
+      &__dots {
+         padding-left: 0px;
+      }
+   }
+   .controls-slider__number p:not(:last-child) {
+      margin-right: 5px;
+   }
+   .dot {
+      width: 7px;
+      height: 7px;
+      margin-right: 10px;
+   }
+   .dot:last-child {
+      margin-right: 0px;
+   }
+   .btn__slider {
+      img {
+         width: 30px;
+      }
+   }
+}
+@media (max-width: 360px) {
+   .controls-slider {
+      bottom: calc(-100px + (-120 - 50) * ((100vw - 420px) / (1024 - 420)));
+   }
+}

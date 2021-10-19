@@ -1,0 +1,42 @@
+.header {
+   background: var(--bg-dark);
+   padding: 59.5px 0px;
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__logo {
+      font-family: Forum;
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 31px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      padding-left: 75px;
+
+      background: url(../assets/svg/logo.svg)no-repeat;
+      background-position: top left;
+   }
+}
+@media (max-width: 1024px) {
+   .header {
+     padding-top: calc(35px + (29.75 - 35) * ((100vw - 420px) / (1024 - 420)));
+     padding-bottom: calc(35px + (29.75 - 35) * ((100vw - 420px) / (1024 - 420)));
+     &__logo {
+      font-size: calc(16px + (28 - 16) * ((100vw - 420px) / (1024 - 420)));
+      line-height: calc(18px + (31 - 18) * ((100vw - 420px) / (1024 - 420)));
+      padding-left: calc(50px + (75 - 50) * ((100vw - 420px) / (1024 - 420)));
+     }
+   }
+}
+@media (max-width: 420px) {
+   .header {
+      &__logo {
+         padding-top: 2px;
+         background-size: 29px 16px;
+      }
+   }
+}

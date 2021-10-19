@@ -1,0 +1,174 @@
+.section-visiting {
+	padding-top: 75px;
+	&__title {
+		position: relative;
+		color: #9d8665;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -28px;
+			width: 100%;
+			height: 3px;
+			background-color: var(--dark-red);
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-wrap: wrap;
+      justify-content: center;
+		gap: 0px 60px;
+		margin-top: 103px;
+	}
+}
+.card-visiting {
+	padding-bottom: 75px;
+	&__phtoto {
+		display: inline-block;
+		overflow: hidden;
+		margin-bottom: 25px;
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center top;
+			transition: 1s;
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+
+	&__title {
+		position: relative;
+		font-family: Forum;
+		font-weight: 400;
+		font-size: 32px;
+		line-height: 35px;
+		letter-spacing: 5px;
+		text-transform: uppercase;
+		color: var(--bg-dark);
+		margin-bottom: 22px;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: -10px;
+			width: 68%;
+			height: 2px;
+			background-color: var(--dark-red);
+			transition: width 1s;
+		}
+	}
+
+	&__subtitle {
+		font-family: Roboto;
+		font-weight: 200;
+		font-size: 22px;
+		line-height: 26px;
+		color: var(--bg-dark);
+	}
+	&__text {
+		font-family: Roboto;
+		font-weight: 200;
+		font-size: 18px;
+		line-height: 21px;
+		color: var(--bg-dark);
+		padding-top: 10px;
+	}
+}
+
+.card-visiting:hover .card-visiting__title::before {
+	width: 100%;
+}
+
+@media (max-width: 1024px) {
+	.section-visiting {
+		padding-top: calc(55px + (75 - 55) * ((100vw - 1024px) / (1440 - 1024)));
+		&__title {
+			&::before {
+				bottom: -16px;
+			}
+		}
+		&__body {
+			margin-top: 77px;
+			justify-content: space-around;
+			gap: 0px 0px;
+		}
+	}
+   .card-visiting:nth-child(2n) {
+      margin-left: 10px;
+   }
+   .card-visiting:nth-child(2n+1) {
+      margin-right: 10px;
+   }
+	.card-visiting {
+		padding-bottom: 57px;
+		img {
+			width: calc(330px + (440 - 330) * ((100vw - 320px) / (1920 - 320)));
+		}
+		&__title {
+			font-size: 28px;
+			line-height: 31px;
+			letter-spacing: 3px;
+		}
+		&__subtitle {
+			font-size: 20px;
+			line-height: 23px;
+		}
+		&__text {
+			font-size: 16px;
+			line-height: 19px;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+  
+	.card-visiting {
+      
+		margin: 0px 10px;
+		img {
+			width: 280px;
+			height: 180px;
+		}
+	}
+	.card-visiting__title {
+		font-size: 22px;
+		line-height: 24px;
+		letter-spacing: 3px;
+	}
+	.card-visiting__subtitle {
+		font-size: 18px;
+		line-height: 21px;
+	}
+}
+
+@media (max-width: 420px) {
+   .section-visiting {
+      padding-bottom: 32px;
+      &__title {
+         margin-top: 15px;
+         &::before {
+            bottom: -22px;
+         }
+      }
+      &__body {
+         margin-top: 61px;
+      }
+   }
+   .card-visiting {
+      padding-bottom: 32px;
+   }
+   .card-visiting__title {
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 5px;
+   }
+   .card-visiting__subtitle {
+		font-size: 16px;
+		line-height: 19px;
+	}
+}
